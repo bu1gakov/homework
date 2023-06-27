@@ -4,21 +4,21 @@ import java.util.Random;
 public class NoEvenNum {
     public static void main(String[] args) {
         Random rnd = new Random();
-        ArrayList<Integer> list1 = new ArrayList<Integer>();
+        ArrayList<Integer> spisok = new ArrayList<Integer>();
         for (int i = 0; i < 10; i++) {
             int val = rnd.nextInt(-100, 100);
-            list1.add(val);
+            spisok.add(val);
         }
-        System.out.printf("Дано: %s\n", list1);
+        System.out.printf("Дано: %s\n", spisok);
         int i = 0;
-        while (i < list1.size()) {
-            if (list1.get(i) % 2 == 0) {
-                list1.remove(i);
+        while (i < spisok.size()) {
+            if (spisok.get(i) % 2 == 0) {
+                spisok.remove(i);
             }
             else {
                 i++;
             }
         }
-        System.out.printf("Список без чётных чисел: %s", list1);
+        System.out.printf("Список без чётных чисел: %s", spisok);
     }
 }
